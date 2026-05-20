@@ -1,0 +1,29 @@
+{
+  "skill_name": "show-me",
+  "evals": [
+    {
+      "id": 0,
+      "name": "english-show-me",
+      "prompt": "show me what's loaded in my Claude Code right now. I want to see all my skills, agents, MCPs, and what overrides what in this project.",
+      "expected_output": "A self-contained HTML file at ~/.claude/snapshots/show-me-<timestamp>.html that renders an interactive markmap with three top-level branches (~/.claude global, ./project, X-ray meta), filter buttons (All/Global/Project), and the actual content of the user's setup (real skill names, agent names, etc. — not made up).",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 1,
+      "name": "hebrew-treh-li",
+      "prompt": "תראה לי מה פעיל עכשיו בפרויקט הזה — אילו skills טעונים, מי דורס מי בין הגלובלי והפרויקטלי",
+      "expected_output": "Same as eval 0 — the skill should trigger on Hebrew phrasing 'תראה לי' and produce the same kind of HTML markmap snapshot.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "casual-audit",
+      "prompt": "I keep losing track of which skills I have installed. Can you give me a visual map of all my skills and agents — global ones and project ones — so I can see them at a glance?",
+      "expected_output": "Same kind of HTML markmap snapshot. The skill should trigger even though the user didn't say 'show me' or 'x-ray' explicitly.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
